@@ -1,0 +1,26 @@
+---
+title: "February 11, 2021 Classwork Assignment"
+output: html_notebook
+name: "Ryan Wirsch"
+---
+
+#Question1
+```{r}
+require(quanteda)
+s1 <- "Trump's lack of remorse shows he will undoubtedly cause future harm Rep. Lieu says"
+length(s1)
+nchar(s1)
+```
+
+#Question2
+```{r}
+s1 <- "Trump's lack of remorse shows he will undoubtedly cause future harm Rep. Lieu says"
+substr(s1, 14,15)
+```
+
+#Question3
+```{r}
+gsub('e','.','Trumps lack of remorse shows he will undoubtedly cause future harm Rep. Lieu says')
+```
+
+
