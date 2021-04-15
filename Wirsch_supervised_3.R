@@ -51,7 +51,7 @@ news_dfm <- dfm(news_samp$text, stem = TRUE, remove_punct = TRUE, remove = stopw
 
 # A. the caret package has it's own partitioning function
 set.seed(1984)
-ids_train <- createDataPartition(1:nrow(news_dfm), p = 0.1, list = FALSE, times = 1)
+ids_train <- createDataPartition(1:nrow(news_dfm), p = 0.01, list = FALSE, times = 1)
 train_x <- news_dfm[ids_train, ] %>% as.data.frame() # train set data
 train_y <- news_samp$class[ids_train] %>% as.factor()  # train set labels
 test_x <- news_dfm[-ids_train, ]  %>% as.data.frame() # test set data
@@ -96,7 +96,7 @@ cat(
 
 
 # 1. Re-run the analysis with a smaller training set and larger test set. Does the accuracy go up or down?
-At the .8 level, the baseline accuracy is 0.665. When I love the P value to .1, the accuracy falls .6549. As the P value becomes lower, the accuracy goes down. 
+At the .8 level, the baseline accuracy is 0.665. When I lower the P value to .1, the accuracy falls .6549. As the P value becomes lower, the accuracy goes down. 
 
 
 
